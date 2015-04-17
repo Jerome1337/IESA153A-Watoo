@@ -1,5 +1,6 @@
 .DS_Store
 .idea/
 gen/
+app/watoo/out/
 app/watoo/plugins/
 app/watoo/platforms/

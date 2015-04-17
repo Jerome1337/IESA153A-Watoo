@@ -109,6 +109,7 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
+<<<<<<< HEAD
 .camera_button {
     background-color: #fff;
     padding: 10px 20px;
@@ -123,4 +124,9 @@ h1 {
 
 .camera_button {
 
+=======
+#map-canvas {
+    width: 100%;
+    height: 300px;
+>>>>>>> b1957a031e0998a1c8b27b898e2350cb66ea3d50
 }
