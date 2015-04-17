@@ -7,6 +7,16 @@
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Apache Cordova Team
     </author>
+    <platform name="ios">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="www/img/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
+    <platform name="android">
+        <splash src="www/img/Default-568h@2x~iphone.png" density="land-hdpi"/>
+	    <splash src="www/img/Default-568h@2x~iphone.png" density="land-ldpi"/>
+	    <splash src="www/img/Default-568h@2x~iphone.png" density="land-mdpi"/>
+	    <splash src="www/img/Default-568h@2x~iphone.png" density="land-xhdpi"/>
+    </platform>
     <content src="index.html" />
     <access origin="*" />
 </widget>
