@@ -34,9 +34,8 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        
-        
-        
+        var element = document.getElementById('contactList');
+        element.innerHTML = '<p>Nom: ' + Contact.name +'</p>';
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
