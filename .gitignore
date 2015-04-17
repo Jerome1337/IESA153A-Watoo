@@ -1,2 +1,5 @@
+.DS_Store
+.idea/
+gen/
 app/watoo/plugins/
 app/watoo/platforms/
