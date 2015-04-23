@@ -11,10 +11,6 @@
     <splash density="land-ldpi" src="www/img/Default-568h@2x~iphone.png" />
     <splash density="land-mdpi" src="www/img/Default-568h@2x~iphone.png" />
     <splash density="land-xhdpi" src="www/img/Default-568h@2x~iphone.png" />
-    <icon density="ldpi" src="www/img/icon-60.png" />
-    <icon density="mdpi" src="www/img/icon-60.png" />
-    <icon density="hdpi" src="www/img/icon-60.png" />
-    <icon density="xhdpi" src="www/img/icon-60.png" />
     <name>Watoo</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
