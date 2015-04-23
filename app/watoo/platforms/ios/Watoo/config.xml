@@ -24,6 +24,9 @@
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
+    <feature name="Globalization">
+        <param name="ios-package" value="CDVGlobalization" />
+    </feature>
     <splash height="1136" src="www/img/Default-568h@2x~iphone.png" width="640" />
     <name>Watoo</name>
     <description>

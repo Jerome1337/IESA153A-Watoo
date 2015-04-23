@@ -19,10 +19,19 @@
     </platform>
     <content src="index.html" />
     <access origin="*" />
+
     <feature name="Camera">
-        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" /> <!-- ANDROID -->
+        <param name="ios-package" value="CDVCamera" /> <!-- IOS -->
     </feature>
-    <feature name="Camera">
-        <param name="ios-package" value="CDVCamera" />
+
+    <feature name="Globalization">
+        <param name="android-package" value="org.apache.cordova.globalization.Globalization" /> <!--ANDROID-->
+        <param name="ios-package" value="CDVGlobalization" /> <!--IOS-->
+    </feature>
+    
+    <feature name="UniversalAnalytics">
+        <param name="ios-package" value="UniversalAnalyticsPlugin" />
+          <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
     </feature>
 </widget>
