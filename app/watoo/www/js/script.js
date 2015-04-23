@@ -1,4 +1,15 @@
 $(function() {
+	/* Gestion du menu */
+	$("button.nav").click(function() {
+		if($("nav.nav").hasClass("open")) {
+			$("nav.nav").removeClass("open");
+		}
+		else {
+			$("nav.nav").addClass("open");
+		}
+	});
+
+	/* Google Maps API 3 */
 	var map = new google.maps.Map(document.getElementById("map-canvas"), {
 		center: new google.maps.LatLng(48.8566667, 2.3509871),
 		zoom: 7,

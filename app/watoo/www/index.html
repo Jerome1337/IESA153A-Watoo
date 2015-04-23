@@ -8,18 +8,35 @@
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,400italic' rel='stylesheet' type='text/css'>
+
 		<link rel="stylesheet" type="text/css" href="css/global.css" />
 
 		<title>Watoo</title>
 	</head>
 
 	<body>
-		<header><h1>Watoo</h1></header>
+		<header>
+			<button class="nav"><i class="icon-menu"></i></button>
+			<img class="logo" src="img/icons/IOS/icon-40@2x.png">
+		</header>
+
+		<nav class="nav">
+			<ul>
+				<li><a href="">Lien 1</a></li>
+				<li><a href="">Lien 2</a></li>
+				<li><a href="">Lien 3</a></li>
+				<li><a href="">Lien 4</a></li>
+			</ul>
+		</nav>
 
 		<section class="gmaps">
 			<div id="map-canvas"></div>
 
-			<button class="geolocation">Géolocation</button>
+			<button class="add"><i class="icon-plus"></i></button>
+			<button class="geolocation"><i class="icon-direction"></i></button>
 		</section>
 		
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtjsZbc5RkPHhf3_31erV8xhfR1k5q_cI"></script>

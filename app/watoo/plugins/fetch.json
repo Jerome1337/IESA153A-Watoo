@@ -17,17 +17,10 @@
             "id": "org.apache.cordova.geolocation"
         }
     },
-    "com.danielcwilson.plugins.googleanalytics": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/danwilson/google-analytics-plugin.git",
-            "subdir": "."
-        }
-    },
-    "com.google.playservices": {
+    "org.apache.cordova.globalization": {
         "source": {
             "type": "registry",
-            "id": "com.google.playservices@19.0.0"
+            "id": "org.apache.cordova.globalization"
         }
     }
 }

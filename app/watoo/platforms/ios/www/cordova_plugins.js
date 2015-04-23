@@ -134,10 +134,17 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.danielcwilson.plugins.googleanalytics/www/analytics.js",
-        "id": "com.danielcwilson.plugins.googleanalytics.UniversalAnalytics",
+        "file": "plugins/org.apache.cordova.globalization/www/GlobalizationError.js",
+        "id": "org.apache.cordova.globalization.GlobalizationError",
         "clobbers": [
-            "analytics"
+            "window.GlobalizationError"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.globalization/www/globalization.js",
+        "id": "org.apache.cordova.globalization.globalization",
+        "clobbers": [
+            "navigator.globalization"
         ]
     }
 ];
@@ -147,7 +154,7 @@ module.exports.metadata =
     "org.apache.cordova.camera": "0.3.6",
     "org.apache.cordova.contacts": "0.2.16",
     "org.apache.cordova.geolocation": "0.3.12",
-    "com.danielcwilson.plugins.googleanalytics": "0.7.0"
+    "org.apache.cordova.globalization": "0.3.4"
 }
 // BOTTOM OF METADATA
 });

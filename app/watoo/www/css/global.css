@@ -1,9 +1,66 @@
-header{
-	height: 40px;
+header {
+	position: relative;
+	height: 60px;
+	line-height: 60px;
+	background-color: #3498db;
+	text-align: center;
+	color: white;
+	padding: 5px 0;
+}
+
+header button.nav {
+	position: absolute;
+	left: 0;
+	height: 60px;
+	width: 60px;
+	color: white;
+	top: 0;
+}
+
+header h1 {
+	font-weight: normal;
+}
+
+header .logo {
+	max-width: 50px;
+	margin: 0 auto;
+}
+
+nav.nav {
+	position: absolute;
+	top: 60px;
+	left: -80%;
+	height: calc(100vh - 60px);
+	width: 80%;
+	background: white;
+	z-index: 10;
+	transition: all 0.5s ease-in-out;
+	transform: translateX(0);
+}
+
+nav.nav.open {
+	transition: all 0.5s ease-in-out;
+	transform: translateX(100%);
+}
+
+nav.nav ul li {
+	border-bottom: 1px solid #aaaaaa;
+}
+
+nav.nav ul li a{
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+	color: #3498db;
+}
+
+nav.nav ul li a:hover{
+	background-color: #2980b9;
+	color: white;
 }
 
 section.gmaps {
-	height: calc(100vh - 40px);
+	height: calc(100vh - 60px);
 	position: relative;
 }
 
@@ -11,11 +68,24 @@ section.gmaps div#map-canvas {
 	height: 100%;
 }
 
-section.gmaps button.geolocation {
+section.gmaps button {
 	position: absolute;
-	bottom: 20px;
 	right: 20px;
-	padding: 10px;
-	background: blue;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #3498db;
 	color: white;
+}
+
+section.gmaps button.add {
+	bottom: 100px;
+}
+
+section.gmaps button.geolocation {
+	bottom: 20px;
+}
+
+i {
+	font-size: 2rem;
 }
