@@ -15,4 +15,4 @@ Les autres utilisateurs possédants l'application pourront alors voir apparaîtr
 * iOS/Android: installation du plugin Camera -> erreurs de javascript<br/>
 
 ### Git
-*Conflits et gestion du gitignore
+* Conflits et gestion du gitignore
