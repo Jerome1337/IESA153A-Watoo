@@ -42,8 +42,6 @@ $(function() {
 			alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
 		}
 	});
-<<<<<<< HEAD
-
 
 
 
@@ -52,11 +50,9 @@ $(function() {
 
 });
 
-=======
+
+$(document).ready(function(){
+	window.analytics.startTrackerWithId('UA-62198728-1');
+    window.analytics.trackView('Homepage');
+    window.analytics.debugMode();
 });
-// $(document).ready(function(){
-// 	window.analytics.startTrackerWithId('UA-62198728-1');
-//     window.analytics.trackView('Homepage');
-//     window.analytics.debugMode();
-// });
->>>>>>> 80c18f842ae42e2c7793b2dd62dc4c2874d98d9b
