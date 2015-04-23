@@ -90,6 +90,13 @@ module.exports = [
         "merges": [
             ""
         ]
+    },
+    {
+        "file": "plugins/com.danielcwilson.plugins.googleanalytics/www/analytics.js",
+        "id": "com.danielcwilson.plugins.googleanalytics.UniversalAnalytics",
+        "clobbers": [
+            "analytics"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -97,7 +104,9 @@ module.exports.metadata =
 {
     "org.apache.cordova.camera": "0.3.6",
     "org.apache.cordova.contacts": "0.2.16",
-    "org.apache.cordova.geolocation": "0.3.12"
+    "org.apache.cordova.geolocation": "0.3.12",
+    "com.danielcwilson.plugins.googleanalytics": "0.7.0",
+    "com.google.playservices": "19.0.0"
 }
 // BOTTOM OF METADATA
 });

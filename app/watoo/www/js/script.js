@@ -32,3 +32,8 @@ $(function() {
 		}
 	});
 });
+// $(document).ready(function(){
+// 	window.analytics.startTrackerWithId('UA-62198728-1');
+//     window.analytics.trackView('Homepage');
+//     window.analytics.debugMode();
+// });

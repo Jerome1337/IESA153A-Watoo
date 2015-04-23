@@ -24,6 +24,9 @@
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
+    <feature name="UniversalAnalytics">
+        <param name="ios-package" value="UniversalAnalyticsPlugin" />
+    </feature>
     <splash height="1136" src="www/img/Default-568h@2x~iphone.png" width="640" />
     <icon height="60" src="www/img/icon-60.png" width="60" />
     <name>Watoo</name>
