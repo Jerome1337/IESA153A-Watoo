@@ -69,6 +69,10 @@
                         {
                             "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Globalization\"><param name=\"ios-package\" value=\"CDVGlobalization\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -93,6 +97,9 @@
             "PACKAGE_NAME": "com.app.watoo"
         },
         "org.apache.cordova.geolocation": {
+            "PACKAGE_NAME": "com.app.watoo"
+        },
+        "org.apache.cordova.globalization": {
             "PACKAGE_NAME": "com.app.watoo"
         }
     },
