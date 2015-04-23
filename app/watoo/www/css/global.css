@@ -5,6 +5,7 @@ header {
 	background-color: #3498db;
 	text-align: center;
 	color: white;
+	padding: 5px 0;
 }
 
 header button.nav {
@@ -13,10 +14,16 @@ header button.nav {
 	height: 60px;
 	width: 60px;
 	color: white;
+	top: 0;
 }
 
 header h1 {
 	font-weight: normal;
+}
+
+header .logo {
+	max-width: 50px;
+	margin: 0 auto;
 }
 
 nav.nav {
