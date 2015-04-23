@@ -35,4 +35,7 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <feature name="Globalization">
+        <param name="ios-package" value="CDVGlobalization" />
+    </feature>
 </widget>
