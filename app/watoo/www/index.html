@@ -11,27 +11,46 @@
 
 		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,400italic' rel='stylesheet' type='text/css'>
-
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/global.css" />
+
 
 		<title>Watoo</title>
 	</head>
 
 	<body>
-		<header>
-			<button class="nav"><i class="icon-menu"></i></button>
-			<h1>Watoo</h1>
-		</header>
-
-		<nav class="nav">
-			<ul>
-				<li><a href="">Lien 1</a></li>
-				<li><a href="">Lien 2</a></li>
-				<li><a href="">Lien 3</a></li>
-				<li><a href="">Lien 4</a></li>
-			</ul>
-		</nav>
-
+		<nav class="navbar navbar-inverse">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#"><img src="img/icons/IOS/icon-50.png"> <span class="brand_title">watoo</span></a>
+	        </div>
+	        <div id="navbar" class="collapse navbar-collapse">
+	          <ul class="nav navbar-nav">
+	            <li><a href="#">Map</a></li>
+	            <li><a href="#">Contact</a></li>
+	            <li><a href="#">Camera</a></li>
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </nav>
+		<section class="map_infos">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h1>Localisation <i class="fa fa-map-marker"></i></h1>
+						<p>Servez vous de la map afin de localiser les points d'eau potable autour de vous ou ajoutez en un :)</p>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section class="gmaps">
 			<div id="map-canvas"></div>
 
@@ -39,9 +58,12 @@
 			<button class="geolocation"><i class="icon-direction"></i></button>
 		</section>
 		
+
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtjsZbc5RkPHhf3_31erV8xhfR1k5q_cI"></script>
 		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
+
   	</body>
 </html>

@@ -1,59 +1,71 @@
-header {
-	position: relative;
-	height: 60px;
-	line-height: 60px;
-	background-color: #3498db;
-	text-align: center;
-	color: white;
+body {
+	background-color: #3281B4;
+	color: #fff;
 }
 
-header button.nav {
-	position: absolute;
-	left: 0;
-	height: 60px;
-	width: 60px;
-	color: white;
+h1 {
+	border-bottom: 1px solid #fff;
+	padding-bottom: 10px;
 }
 
-header h1 {
-	font-weight: normal;
+/*
+
+_________________Navbar
+
+*/
+
+.navbar {
+	margin: 0;
 }
 
-nav.nav {
-	position: absolute;
-	top: 60px;
-	left: -80%;
-	height: calc(100vh - 60px);
-	width: 80%;
-	background: white;
-	z-index: 10;
-	transition: all 0.5s ease-in-out;
-	transform: translateX(0);
+.navbar-inverse {
+	background-color: #3498DB;
+	border: none;
 }
 
-nav.nav.open {
-	transition: all 0.5s ease-in-out;
-	transform: translateX(100%);
+.navbar-brand {
+	padding: 0;
+	padding-left: 15px;
 }
 
-nav.nav ul li {
-	border-bottom: 1px solid #aaaaaa;
+.navbar-brand .brand_title {
+	  position: absolute;
+	  top: 14px;
+	  left: 63px;
+	  color: #fff;
 }
 
-nav.nav ul li a{
-	display: block;
-	padding: 20px;
-	text-decoration: none;
-	color: #3498db;
+.navbar-inverse .navbar-toggle{
+  border: none;
 }
 
-nav.nav ul li a:hover{
-	background-color: #2980b9;
-	color: white;
+.navbar-inverse .navbar-nav>li>a {
+	color: #fff;
 }
+
+.navbar-inverse .navbar-collapse {
+	border-top:2px solid #fff;
+	border-bottom:2px solid #fff;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle:focus .icon-bar {
+  background-color: #3281B4;
+}
+
+
+/*
+
+_________________Navbar Fin
+
+*/
+
 
 section.gmaps {
-	height: calc(100vh - 60px);
+	height: 80vh;
 	position: relative;
 }
 
@@ -72,11 +84,22 @@ section.gmaps button {
 }
 
 section.gmaps button.add {
-	bottom: 100px;
+	bottom: 25%;
 }
 
 section.gmaps button.geolocation {
-	bottom: 20px;
+	bottom: 10%;
+}
+
+.map_infos {
+	height: 20vh;
+	background: #fff;
+	color: #3498DB;
+}
+
+.map_infos h1 {
+	border-bottom: 1px solid #3498DB;
+	color: #3498DB;
 }
 
 i {
