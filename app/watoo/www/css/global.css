@@ -9,6 +9,10 @@ h1 {
 	margin-top: 10px;
 }
 
+i {
+	font-size: 2rem;
+}
+
 /*
 
 _________________Navbar
@@ -42,6 +46,8 @@ _________________Navbar
 
 .navbar-inverse .navbar-nav>li>a {
 	color: #fff;
+	text-transform: uppercase;
+  	font-weight: 900;
 }
 
 .navbar-inverse .navbar-collapse {
@@ -65,6 +71,13 @@ _________________Navbar Fin
 */
 
 
+/*
+
+_________________Gmap
+
+*/
+
+
 section.gmaps {
 	height: 85vh;
 	position: relative;
@@ -82,6 +95,34 @@ section.gmaps button {
 	background-color: #3498db;
 	color: white;
 }
+
+
+.map_infos {
+	height: 15vh;
+	background: #fff;
+	color: #3498DB;
+}
+
+.map_infos h1 {
+	border-bottom: 1px solid #3498DB;
+	color: #3498DB;
+}
+
+
+/*
+
+_________________Gmap Fin
+
+*/
+
+
+
+/*
+
+_________________button style
+
+*/
+
 
 .button_container {
 	position: absolute;
@@ -101,17 +142,16 @@ section.gmaps button.geolocation {
   	border:6px solid #fff;
 }
 
-.map_infos {
-	height: 15vh;
-	background: #fff;
-	color: #3498DB;
-}
 
-.map_infos h1 {
-	border-bottom: 1px solid #3498DB;
-	color: #3498DB;
-}
+/*
 
-i {
-	font-size: 2rem;
-}
+_________________button style fin
+
+*/
+
+
+
+
+
+
+
