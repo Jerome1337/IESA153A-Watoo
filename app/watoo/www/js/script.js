@@ -4,27 +4,21 @@ function onDeviceReady() {
 }
 
 $(function() {
-	/* Gestion du menu */
-	$("button.nav").on("tap", function() {
-		if($("nav.nav").hasClass("open")) {
-			$("nav.nav").removeClass("open");
-		}
-		else {
-			$("nav.nav").addClass("open");
-		}
-	});
-
 	/* Google Maps API 3 */
 	var map = new google.maps.Map(document.getElementById("map-canvas"), {
 		center: new google.maps.LatLng(48.8566667, 2.3509871),
-		zoom: 7,
+		zoom: 8,
 		panControl: false,
 		zoomControl: false,
 		mapTypeControl: false,
 		streetViewControl: false,
 	});
 
-	$("button.geolocation").on("tap", function() {
+	$("button.geolocation").on("tap", geolocation);
+
+	$("button.geolocation").on("click",	geolocation);
+
+	function geolocation() {
 		navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
 		// onSuccess Callback
@@ -46,5 +40,5 @@ $(function() {
 		function onError(error) {
 			alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
 		}
-	});
+	}
 });

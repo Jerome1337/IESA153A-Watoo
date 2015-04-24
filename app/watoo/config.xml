@@ -70,6 +70,21 @@
 	    
      </platform>
 
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
+    
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+    </feature>
+    
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
 
 	<feature name="NetworkStatus">
 		<param name="ios-package" value="CDVConnection" />
