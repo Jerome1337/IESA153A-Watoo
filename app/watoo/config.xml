@@ -69,5 +69,12 @@
 		<splash src="www/img/splash_screen/Android/splash-port-xhdpi.png" density="port-xhdpi"/>
 	    
      </platform>
+
+
+	<feature name="NetworkStatus">
+		<param name="ios-package" value="CDVConnection" />
+		<param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+	</feature>
+
 </widget>
 
