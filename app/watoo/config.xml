@@ -53,6 +53,16 @@
 
 	</platform>
 
+	<platform name="android">
+		<icon src="www/img/icons/Android/ldpi.png" density="ldpi" />
+		<icon src="www/img/icons/Android/tvdpi.png" density="tvdpi" />
+		<icon src="www/img/icons/Android/mdpi.png" density="mdpi" />
+		<icon src="www/img/icons/Android/hdpi.png" density="hdpi" />
+		<icon src="www/img/icons/Android/xhdpi.png" density="xhdpi" />
+		<icon src="www/img/icons/Android/xxhdpi.png" density="xxhdpi" />
+		<icon src="www/img/icons/Android/xxxhdpi.png" density="xxxhdpi" />
+     </platform>
+
 
 </widget>
 
