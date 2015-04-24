@@ -1,6 +1,6 @@
 $(function() {
 	/* Gestion du menu */
-	$("button.nav").click(function() {
+	$("button.nav").on("tap", function() {
 		if($("nav.nav").hasClass("open")) {
 			$("nav.nav").removeClass("open");
 		}
@@ -19,7 +19,7 @@ $(function() {
 		streetViewControl: false,
 	});
 
-	$("button.geolocation").click(function() {
+	$("button.geolocation").on("tap", function() {
 		navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
 		// onSuccess Callback
