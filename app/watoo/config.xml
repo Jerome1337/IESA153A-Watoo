@@ -61,6 +61,14 @@
 		<icon src="www/img/icons/Android/xhdpi.png" density="xhdpi" />
 		<icon src="www/img/icons/Android/xxhdpi.png" density="xxhdpi" />
 		<icon src="www/img/icons/Android/xxxhdpi.png" density="xxxhdpi" />
+
+	
+		<!-- you can use any density that exists in the Android project -->
+	    <splash src="www/img/splash_screen/Android/splash-land-hdpi.png" density="land-hdpi"/>
+	    <splash src="www/img/splash_screen/Android/splash-land-mdpi.png" density="land-mdpi"/>
+		<splash src="www/img/splash_screen/Android/splash-port-hdpi.png" density="port-hdpi"/>
+		<splash src="www/img/splash_screen/Android/splash-port-xhdpi.png" density="port-xhdpi"/>
+	    
      </platform>
 
 
