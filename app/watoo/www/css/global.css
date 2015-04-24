@@ -65,7 +65,7 @@ _________________Navbar Fin
 
 
 section.gmaps {
-	height: 80vh;
+	height: 85vh;
 	position: relative;
 }
 
@@ -74,25 +74,34 @@ section.gmaps div#map-canvas {
 }
 
 section.gmaps button {
-	position: absolute;
-	right: 20px;
-	width: 60px;
-	height: 60px;
+	position: relative;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	background-color: #3498db;
 	color: white;
 }
 
+.button_container {
+	position: absolute;
+	  top: 0vh;
+	  left: 0%;
+	  width: 100%;
+	  text-align: center;
+}
+
 section.gmaps button.add {
-	bottom: 25%;
+	top: -5vh;
+	border:6px solid #fff;
 }
 
 section.gmaps button.geolocation {
-	bottom: 10%;
+	top: -5vh;
+  	border:6px solid #fff;
 }
 
 .map_infos {
-	height: 20vh;
+	height: 15vh;
 	background: #fff;
 	color: #3498DB;
 }
