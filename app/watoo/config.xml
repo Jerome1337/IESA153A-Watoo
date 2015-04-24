@@ -76,5 +76,12 @@
 		<param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
 	</feature>
 
+	<feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" onload="true" />
+    </feature>
+	<preference name="StatusBarOverlaysWebView" value="false" />
+	<preference name="StatusBarBackgroundColor" value="#3281B4" />
+	<preference name="StatusBarStyle" value="lightcontent" />
+
 </widget>
 
