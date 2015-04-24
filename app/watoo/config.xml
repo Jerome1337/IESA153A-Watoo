@@ -87,6 +87,7 @@
     </feature>
 
 	<feature name="NetworkStatus">
+		<param name="ios-package" value="CDVContacts" />
 		<param name="ios-package" value="CDVConnection" />
 		<param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
 	</feature>
