@@ -61,8 +61,6 @@
 		<icon src="www/img/icons/Android/xhdpi.png" density="xhdpi" />
 		<icon src="www/img/icons/Android/xxhdpi.png" density="xxhdpi" />
 		<icon src="www/img/icons/Android/xxxhdpi.png" density="xxxhdpi" />
-     </platform>
-
-
+    </platform>
 </widget>
 
