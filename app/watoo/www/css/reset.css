@@ -1,0 +1,111 @@
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);	/* make transparent link selection, adjust last value opacity 0 to 1.0 */
+
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+::-ms-clear {
+	display: none;
+}
+
+::-ms-reveal {
+	display: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+body {
+	background: white;
+	font-family: "Roboto", Arial, Sans-Serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.6rem;
+	-webkit-text-size-adjust: none;
+	color: #797979;
+	-webkit-touch-callout: none;		/* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none;		/* prevent webkit from resizing text to fit */
+	-webkit-user-select: none;			/* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+ul {
+	list-style: none;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+i, em {
+	font-style: italic;
+}
+
+button {
+	font-family: "Roboto", Arial, Sans-Serif;
+	cursor: pointer;
+}
+
+input {
+	display: block;
+	font-family: "Roboto", Arial, Sans-Serif;
+	font-size: 1.6rem;
+}
+
+input:required {
+	box-shadow: none;
+}
+
+input:invalid {
+	box-shadow: none;
+}
+
+textarea {
+	font-family: "Roboto", Arial, Sans-Serif;
+	resize: vertical;
+	min-height: 150px;
+	max-height: 300px;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	color: #333333;
+	color: rgba(51, 51, 51, 0);
+	text-shadow: 0 0 0 #333333;
+	font-style: italic;
+	cursor: pointer;
+}
