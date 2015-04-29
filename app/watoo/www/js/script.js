@@ -3,17 +3,76 @@ function onDeviceReady() {
 	StatusBar.hide();
 }
 
+
 $(function() {
-	/* Google Maps API 3 */
-	var map = new google.maps.Map(document.getElementById("map-canvas"), {
+    
+    // Charger point depuis srv
+    var url = 'http://www.iesanetwork.com/t.capitant/test.json';
+    
+    
+     var mapOptions = new google.maps.Map(document.getElementById("map-canvas"), {
 		center: new google.maps.LatLng(48.8566667, 2.3509871),
 		zoom: 8,
 		panControl: false,
 		zoomControl: false,
 		mapTypeControl: false,
 		streetViewControl: false,
-	});
+         
+	    });
+    
+    $.ajax({
+            type: 'GET',
+            url: url,
+            async: false,
+            jsonpCallback: 'jsonCallback',
+            contentType: "application/json",
+            dataType: 'jsonp',
+            success: function(json) {
+    var markers = json.locations;            
+    /* Google Maps API 3 */
+    
+   
+    
+    var infoWindow = new google.maps.InfoWindow();
+ 
+    for (i = 0; i < markers.length; i++) {
+    var image = 'img/marker.png'/*{
+    url: '/img/marker.png',
+    // This marker is 20 pixels wide by 32 pixels tall.
+    size: new google.maps.Size(22, 32),
+    // The origin for this image is 0,0.
+    origin: new google.maps.Point(0,0),
+    // The anchor for this image is the base of the flagpole at 0,32.
+    anchor: new google.maps.Point(0, 32)
+  }*/;
+    var data = markers[i]
+    var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+    var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: mapOptions,
+    icon: image,
+    title: data.title
+    });
+    (function(marker, data) {
 
+    // Attaching a click event to the current marker
+    google.maps.event.addListener(marker, "click", function(e) {
+    infoWindow.setContent(data.description);
+    infoWindow.open(mapOptions, marker);
+    });
+    })(marker, data);
+    }
+        },
+            error: function(e) {
+               console.log('salut');
+            }
+        
+    }); 
+
+    //Geolocation
+
+    
+    
 	$("button.geolocation").on("tap", geolocation);
 
 	$("button.geolocation").on("click",	geolocation);
@@ -24,16 +83,25 @@ $(function() {
 		// onSuccess Callback
 		function onSuccess(position) {
 			var geolocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-
-			var marker = new google.maps.Marker({
-				map: map,
+            var mymarkerimg = 'img/mymarker.png'; /*{
+                url: 'img/mymarker.png' 'img/mymarker.png',
+                // This marker is 20 pixels wide by 32 pixels tall.
+                size: new google.maps.Size(22, 32),
+                // The origin for this image is 0,0.
+                origin: new google.maps.Point(0,0),
+                // The anchor for this image is the base of the flagpole at 0,32.
+                anchor: new google.maps.Point(0, 32)
+              }*/
+			var mymarker = new google.maps.Marker({
+				map: mapOptions,
 				position: geolocation,
-				draggable: false
+				draggable: false,
+                icon : mymarkerimg
 			});
 
-			marker.setMap(map);
-			map.setCenter(geolocation);
-			map.setZoom(14);
+			mymarker.setMap(mapOptions);
+			mapOptions.setCenter(geolocation);
+			mapOptions.setZoom(14);
 		};
 
 		// onError Callback receives a PositionError object
@@ -41,5 +109,6 @@ $(function() {
 			alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
 		}
 	}
+    
 });
 
