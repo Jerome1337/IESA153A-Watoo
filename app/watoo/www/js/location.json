@@ -1,0 +1,19 @@
+jsonCallback({
+	"locations": [
+		{
+			"title": "Coordonnée 1",
+			"lat": 48.848480,
+			"lng": 2.366666,
+		},
+		{
+			"title": "Coordonnée 2",
+			"lat": 48.862655,
+			"lng": 2.396707,
+		},
+		{
+			"title": "Coordonnée 3",
+			"lat": 48.858024,
+			"lng": 2.294568,
+		}
+	]
+}); 
