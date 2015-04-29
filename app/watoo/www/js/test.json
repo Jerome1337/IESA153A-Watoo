@@ -1,0 +1,23 @@
+jsonCallback(
+{ 
+  "locations": [
+        {
+        "title": "test1",
+        "lat": 48.848480,
+        "lng": 2.366666,
+        "description": "test"
+        },
+        {
+        "title": "test 2",
+        "lat": 48.862655,
+        "lng": 2.396707,
+        "description": "test"
+        },
+        {
+        "title": "test3",
+        "lat": 48.858024,
+        "lng": 2.294568,
+        "description": "test3"
+        }
+  ] 
+}); 
