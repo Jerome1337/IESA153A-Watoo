@@ -2,27 +2,22 @@ jsonCallback(
 { 
   "locations": [
         {
-        "title": "Chennai",
+        "title": "test1",
         "lat": 48.848480,
         "lng": 2.366666,
-        "description": "Chennai"
+        "description": "test"
         },
         {
-        "title": "Hyderabad",
+        "title": "test 2",
         "lat": 48.862655,
         "lng": 2.396707,
-        "description": "Hyderabad"
+        "description": "test"
         },
         {
-        "title": "Bangalore",
-        "lat": 12.897489183755905,
-        "lng": 77.51953125,
-        "description": "Bangalore"
-        },
-        {
-        "title": "visakhapatnam",
-        "lat": 17.518344187852207,
-        "lng": 83.3203125,
-        "description": "visakhapatnam"
-        }] 
+        "title": "test3",
+        "lat": 48.858024,
+        "lng": 2.294568,
+        "description": "test3"
+        }
+  ] 
 }); 
