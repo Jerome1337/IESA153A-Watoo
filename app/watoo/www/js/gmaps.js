@@ -81,12 +81,13 @@ $(function() {
                 anchor: new google.maps.Point(15, 45)
               }
 			var mymarker = new google.maps.Marker({
-				map: map,
+				map: mapOptions,
 				position: geolocation,
+                icon: mymarkerimg,
 				draggable: false
 			});
 
-			mymarker.setMap(map);
+			mymarker.setMap(mapOptions);
 			mapOptions.setCenter(geolocation);
 			mapOptions.setZoom(14);
 		};
