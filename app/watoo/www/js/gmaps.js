@@ -15,11 +15,11 @@ $(function() {
     var image = {
     url: 'img/marker.png',
     // This marker is 20 pixels wide by 32 pixels tall.
-    size: new google.maps.Size(295, 435),
+    size: new google.maps.Size(31, 45),
     // The origin for this image is 0,0.
     origin: new google.maps.Point(0,0),
     // The anchor for this image is the base of the flagpole at 0,32.
-    anchor: new google.maps.Point(0, 32)
+    anchor: new google.maps.Point(15, 45)
     };
     
     $.ajax({
@@ -74,11 +74,11 @@ $(function() {
             var mymarkerimg = {
                 url: 'img/mymarker.png',
                 // This marker is 20 pixels wide by 32 pixels tall.
-                size: new google.maps.Size(295, 435),
+                size: new google.maps.Size(31, 45),
                 // The origin for this image is 0,0.
                 origin: new google.maps.Point(0,0),
                 // The anchor for this image is the base of the flagpole at 0,32.
-                anchor: new google.maps.Point(0, 435)
+                anchor: new google.maps.Point(15, 45)
               }
 			var mymarker = new google.maps.Marker({
 				map: map,
