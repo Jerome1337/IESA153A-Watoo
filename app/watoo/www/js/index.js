@@ -131,35 +131,12 @@ $(function() {
 		$('div.shadow').hide();
 	}
 
-	document.getElementById('buttonHome').addEventListener('touchend', function() {
-		var view = 'home';
-		changeView($(this), view);
-	}, false);
-
-	document.getElementById('buttonPhotos').addEventListener('touchend', function() {
-		var view = 'photos';
-		changeView($(this), view);
-	}, false);
-
-	document.getElementById('buttonContacts').addEventListener('touchend', function() {
-		var view = 'contacts';
-		changeView($(this), view);
-	}, false);
-
-	document.getElementById('buttonNotes').addEventListener('touchend', function() {
-		var view = 'notes';
-		changeView($(this), view);
-	}, false);
-
-	document.getElementById('buttonImports').addEventListener('touchend', function() {
-		var view = 'imports';
-		changeView($(this), view);
-	}, false);
-
-	document.getElementById('buttonSettings').addEventListener('touchend', function() {
-		var view = 'settings';
-		changeView($(this), view);
-	}, false);
+	document.getElementById('buttonHome').addEventListener('touchend', function() { var view = 'home'; changeView($(this), view); }, false);
+	document.getElementById('buttonPhotos').addEventListener('touchend', function() { var view = 'photos'; changeView($(this), view); }, false);
+	document.getElementById('buttonContacts').addEventListener('touchend', function() { var view = 'contacts'; changeView($(this), view); }, false);
+	document.getElementById('buttonNotes').addEventListener('touchend', function() { var view = 'notes'; changeView($(this), view); }, false);
+	document.getElementById('buttonImports').addEventListener('touchend', function() { var view = 'imports'; changeView($(this), view); }, false);
+	document.getElementById('buttonSettings').addEventListener('touchend', function() { var view = 'settings'; changeView($(this), view); }, false);
 
 	function changeView(active, view) {
 		if(!active.parent("li").hasClass("active")) {
@@ -167,53 +144,35 @@ $(function() {
 			active.parent("li").addClass("active");
 
 			setTimeout(function() {
-				if(view === 'photos') {
-					$('section.view').children('section.middle').removeClass('middle').addClass('right').delay('300').queue(function() {
-						$(this).removeClass('right').addClass('left');
-						$(this).dequeue();
-					});
-
-					$('section.view').children('section.photos.left').removeClass('left').addClass('middle');
+				switch(view) {
+					case 'photos':
+						changeView('photos');
+						break;
+					case 'contacts':
+						changeView('contacts');
+						break;
+					case 'notes':
+						changeView('notes');
+						break;
+					case 'imports':
+						changeView('imports');
+						break;
+					case 'settings':
+						changeView('settings');
+						break;
+					default: // else
+						changeView('home');
+						break;
 				}
-				else if(view === 'contacts') {
-					$('section.view').children('section.middle').removeClass('middle').addClass('right').delay('300').queue(function() {
+
+				function changeView(view){
+					$('section.view').children('section.middle').removeClass('middle').addClass('right').delay(300).queue(function(){
 						$(this).removeClass('right').addClass('left');
 						$(this).dequeue();
 					});
-
-					$('section.view').children('section.contacts.left').removeClass('left').addClass('middle');
-				}
-				else if(view === 'notes') {
-					$('section.view').children('section.middle').removeClass('middle').addClass('right').delay('300').queue(function() {
-						$(this).removeClass('right').addClass('left');
-						$(this).dequeue();
-					});
-
-					$('section.view').children('section.notes.left').removeClass('left').addClass('middle');
-				}
-				else if(view === 'imports') {
-					$('section.view').children('section.middle').removeClass('middle').addClass('right').delay('300').queue(function() {
-						$(this).removeClass('right').addClass('left');
-						$(this).dequeue();
-					});
-
-					$('section.view').children('section.imports.left').removeClass('left').addClass('middle');
-				}
-				else if(view === 'settings') {
-					$('section.view').children('section.middle').removeClass('middle').addClass('right').delay('300').queue(function() {
-						$(this).removeClass('right').addClass('left');
-						$(this).dequeue();
-					});
-
-					$('section.view').children('section.settings.left').removeClass('left').addClass('middle');
-				}
-				else {
-					$('section.view').children('section.middle').removeClass('middle').addClass('right').delay('300').queue(function() {
-						$(this).removeClass('right').addClass('left');
-						$(this).dequeue();
-					});
-
-					$('section.view').children('section.home.left').removeClass('left').addClass('middle');
+					if(view){
+						$('section.view').children('section.' + view + '.left').removeClass('left').addClass('middle');
+					}
 				}
 
 				hideNavigation();
@@ -229,6 +188,7 @@ $(function() {
 
 	db.transaction(function(tx){
 		tx.executeSql('CREATE TABLE IF NOT EXISTS USERS(id INTEGER PRIMARY KEY, texte)');
+
 
 		tx.executeSql("SELECT * FROM USERS", [], function(tx, results) {
 			if(results.rows) {
@@ -258,6 +218,8 @@ $(function() {
 			});
 		}
 	}
+
+// Florian Powaaaaa
 
 	/* -- ACCES REMOTE -------------------------------------------------------------------------------------------------------------- */
 	var url = 'http://www.iesanetwork.com/t.capitant/test.json';
