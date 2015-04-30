@@ -131,35 +131,12 @@ $(function() {
 		$('div.shadow').hide();
 	}
 
-	document.getElementById('buttonHome').addEventListener('touchend', function() {
-		var view = 'home';
-		changeView($(this), view);
-	}, false);
-
-	document.getElementById('buttonPhotos').addEventListener('touchend', function() {
-		var view = 'photos';
-		changeView($(this), view);
-	}, false);
-
-	document.getElementById('buttonContacts').addEventListener('touchend', function() {
-		var view = 'contacts';
-		changeView($(this), view);
-	}, false);
-
-	document.getElementById('buttonNotes').addEventListener('touchend', function() {
-		var view = 'notes';
-		changeView($(this), view);
-	}, false);
-
-	document.getElementById('buttonImports').addEventListener('touchend', function() {
-		var view = 'imports';
-		changeView($(this), view);
-	}, false);
-
-	document.getElementById('buttonSettings').addEventListener('touchend', function() {
-		var view = 'settings';
-		changeView($(this), view);
-	}, false);
+	document.getElementById('buttonHome').addEventListener('touchend', function() { var view = 'home'; changeView($(this), view); }, false);
+	document.getElementById('buttonPhotos').addEventListener('touchend', function() { var view = 'photos'; changeView($(this), view); }, false);
+	document.getElementById('buttonContacts').addEventListener('touchend', function() { var view = 'contacts'; changeView($(this), view); }, false);
+	document.getElementById('buttonNotes').addEventListener('touchend', function() { var view = 'notes'; changeView($(this), view); }, false);
+	document.getElementById('buttonImports').addEventListener('touchend', function() { var view = 'imports'; changeView($(this), view); }, false);
+	document.getElementById('buttonSettings').addEventListener('touchend', function() { var view = 'settings'; changeView($(this), view); }, false);
 
 	function changeView(active, view) {
 		if(!active.parent("li").hasClass("active")) {
@@ -167,53 +144,35 @@ $(function() {
 			active.parent("li").addClass("active");
 
 			setTimeout(function() {
-				if(view === 'photos') {
-					$('section.view').children('section.middle').removeClass('middle').addClass('right').delay('300').queue(function() {
-						$(this).removeClass('right').addClass('left');
-						$(this).dequeue();
-					});
-
-					$('section.view').children('section.photos.left').removeClass('left').addClass('middle');
+				switch(view) {
+					case 'photos':
+						changeView('photos');
+						break;
+					case 'contacts':
+						changeView('contacts');
+						break;
+					case 'notes':
+						changeView('notes');
+						break;
+					case 'imports':
+						changeView('imports');
+						break;
+					case 'settings':
+						changeView('settings');
+						break;
+					default: // else
+						changeView('home');
+						break;
 				}
-				else if(view === 'contacts') {
-					$('section.view').children('section.middle').removeClass('middle').addClass('right').delay('300').queue(function() {
+
+				function changeView(view){
+					$('section.view').children('section.middle').removeClass('middle').addClass('right').delay(300).queue(function(){
 						$(this).removeClass('right').addClass('left');
 						$(this).dequeue();
 					});
-
-					$('section.view').children('section.contacts.left').removeClass('left').addClass('middle');
-				}
-				else if(view === 'notes') {
-					$('section.view').children('section.middle').removeClass('middle').addClass('right').delay('300').queue(function() {
-						$(this).removeClass('right').addClass('left');
-						$(this).dequeue();
-					});
-
-					$('section.view').children('section.notes.left').removeClass('left').addClass('middle');
-				}
-				else if(view === 'imports') {
-					$('section.view').children('section.middle').removeClass('middle').addClass('right').delay('300').queue(function() {
-						$(this).removeClass('right').addClass('left');
-						$(this).dequeue();
-					});
-
-					$('section.view').children('section.imports.left').removeClass('left').addClass('middle');
-				}
-				else if(view === 'settings') {
-					$('section.view').children('section.middle').removeClass('middle').addClass('right').delay('300').queue(function() {
-						$(this).removeClass('right').addClass('left');
-						$(this).dequeue();
-					});
-
-					$('section.view').children('section.settings.left').removeClass('left').addClass('middle');
-				}
-				else {
-					$('section.view').children('section.middle').removeClass('middle').addClass('right').delay('300').queue(function() {
-						$(this).removeClass('right').addClass('left');
-						$(this).dequeue();
-					});
-
-					$('section.view').children('section.home.left').removeClass('left').addClass('middle');
+					if(view){
+						$('section.view').children('section.' + view + '.left').removeClass('left').addClass('middle');
+					}
 				}
 
 				hideNavigation();
@@ -229,6 +188,7 @@ $(function() {
 
 	db.transaction(function(tx){
 		tx.executeSql('CREATE TABLE IF NOT EXISTS USERS(id INTEGER PRIMARY KEY, texte)');
+
 
 		tx.executeSql("SELECT * FROM USERS", [], function(tx, results) {
 			if(results.rows) {
@@ -259,7 +219,13 @@ $(function() {
 		}
 	}
 
+<<<<<<< HEAD
 	/* -- ACCES REMOTE -------------------------------------------------------------------------------------------------------------- 
+=======
+// Florian Powaaaaa
+
+	/* -- ACCES REMOTE -------------------------------------------------------------------------------------------------------------- */
+>>>>>>> 6f1c8558f2599fa3b2d088316ffffa58b3d8fa7f
 	var url = 'http://www.iesanetwork.com/t.capitant/test.json';
 
 	$.ajax({
@@ -282,5 +248,105 @@ $(function() {
 			document.getElementById('imports').innerHTML = string;
 		}
 	});
+<<<<<<< HEAD
     */
+=======
+
+/*
+    // Charger point depuis srv
+    var url = 'http://www.iesanetwork.com/t.capitant/test.json';
+    
+    
+     var mapOptions = new google.maps.Map(document.getElementById("map-canvas"), {
+		center: new google.maps.LatLng(48.8566667, 2.3509871),
+		zoom: 8,
+		panControl: false,
+		zoomControl: false,
+		mapTypeControl: false,
+		streetViewControl: false,
+         
+	    });
+    
+    $.ajax({
+            type: 'GET',
+            url: url,
+            async: false,
+            jsonpCallback: 'jsonCallback',
+            contentType: "application/json",
+            dataType: 'jsonp',
+            success: function(json) {
+    var markers = json.locations;            
+    /* Google Maps API 3 */
+    
+   
+    /*
+    var infoWindow = new google.maps.InfoWindow();
+ 
+    for (i = 0; i < markers.length; i++) {
+    var image = 'img/marker.png';
+    var data = markers[i]
+    var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+    var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: mapOptions,
+    icon: image,
+    title: data.title
+    });
+    (function(marker, data) {
+
+    // Attaching a click event to the current marker
+    google.maps.event.addListener(marker, "click", function(e) {
+    infoWindow.setContent(data.description);
+    infoWindow.open(mapOptions, marker);
+    });
+    })(marker, data);
+    }
+        },
+            error: function(e) {
+               console.log('salut');
+            }
+        
+    }); 
+
+    //Geolocation
+
+    
+    
+	$("button.geolocation").on("tap", geolocation);
+
+	$("button.geolocation").on("click",	geolocation);
+
+	function geolocation() {
+		navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+		// onSuccess Callback
+		function onSuccess(position) {
+			var geolocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            var mymarkerimg = 'img/mymarker.png'; /*{
+                url: 'img/mymarker.png' 'img/mymarker.png',
+                // This marker is 20 pixels wide by 32 pixels tall.
+                size: new google.maps.Size(22, 32),
+                // The origin for this image is 0,0.
+                origin: new google.maps.Point(0,0),
+                // The anchor for this image is the base of the flagpole at 0,32.
+                anchor: new google.maps.Point(0, 32)
+              }*//*
+			var mymarker = new google.maps.Marker({
+				map: mapOptions,
+				position: geolocation,
+				draggable: false,
+                icon : mymarkerimg
+			});
+
+			mymarker.setMap(mapOptions);
+			mapOptions.setCenter(geolocation);
+			mapOptions.setZoom(14);
+		};
+
+		// onError Callback receives a PositionError object
+		function onError(error) {
+			alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+		}
+	}*/
+>>>>>>> 6f1c8558f2599fa3b2d088316ffffa58b3d8fa7f
 });
