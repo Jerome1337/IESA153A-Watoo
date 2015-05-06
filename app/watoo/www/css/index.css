@@ -47,12 +47,18 @@ nav.nav {
 	z-index: 10;
 
 	background-color: white;
+	-webkit-transform: translate3D(-100%, 0, 0);
+	-ms-transform: translate3D(-100%, 0, 0);
 	transform: translate3D(-100%, 0, 0);
+	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
 
 nav.nav.open {
+	-webkit-transform: translate3D(0, 0, 0);
+	-ms-transform: translate3D(0, 0, 0);
 	transform: translate3D(0, 0, 0);
+	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
 
@@ -87,16 +93,24 @@ section.view > section {
 }
 
 section.view section.left {
+	-webkit-transform: translate3D(-100%, 0, 0);
+	-ms-transform: translate3D(-100%, 0, 0);
 	transform: translate3D(-100%, 0, 0);
 }
 
 section.view section.middle {
+	-webkit-transform: translate3D(0, 0, 0);
+	-ms-transform: translate3D(0, 0, 0);
 	transform: translate3D(0, 0, 0);
+	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
 
 section.view section.right {
+	-webkit-transform: translate3D(100%, 0, 0);
+	-ms-transform: translate3D(100%, 0, 0);
 	transform: translate3D(100%, 0, 0);
+	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
 
