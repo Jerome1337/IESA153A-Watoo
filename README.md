@@ -23,3 +23,43 @@ Les autres utilisateurs possédants l'application pourront alors voir apparaîtr
 
 ### Git
 * Conflits et gestion du gitignore
+
+## Installation
+
+Clone Watoo repo:
+
+```console
+$ git clone https://github.com/Jerome1337/IESA153A-Watoo.git
+```
+
+<br/>
+You will need to download app dependencies (platform + plugins).
+
+```console
+$ cordova platform add ios
+$ cordova platform add android
+```
+
+Add the plugins
+
+```console
+$ cordova plugin add org.apache.cordova.camera
+$ cordova plugin add org.apache.cordova.geolocation
+$ cordova plugin add org.apache.cordova.statusbar
+$ cordova plugin add org.apache.cordova.contacts
+$ cordova plugin add com.unarin.cordova.beacon
+```
+
+<br/>
+
+There is some Cordova commands:
+
+```console
+$ cordova prepare
+$ cordova compile
+$ cordova build   // run cordova prepare and compile below at the same time
+$ cordova emulate platform (ios/android)   // Test the App on an Emulator or Device
+$ cordova plugins ls // List all your installed plugins
+```
+
+**You're done ! Let's code**
