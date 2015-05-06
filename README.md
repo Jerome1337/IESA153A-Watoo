@@ -58,8 +58,8 @@ There is some Cordova commands:
 $ cordova prepare
 $ cordova compile
 $ cordova build   // run cordova prepare and compile at the same time
-$ cordova emulate platform (ios/android)   // Test the App on an Emulator or Device
-$ cordova plugins ls // List all your installed plugins
+$ cordova emulate ios/android  // Test the App on an Emulator or Device
+$ cordova plugins ls  // List all your installed plugins
 ```
 
 **You're done ! Let's code**
