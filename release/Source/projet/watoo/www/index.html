@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+		<title>Watoo</title>
+	</head>
+
+	<body>
+		<header class="header">
+			<button id="buttonOpenNav" class="nav"><i class="icon icon-menu"></i></button>
+			<h1 class="logo">Watoo</h1>
+		</header>
+
+		<div id="shadowCloseNav" class="shadow"></div>
+		<nav class="nav">
+			<ul>
+				<li class="active"><button id="buttonHome">Accueil</button></li>
+				<li><button id="buttonPhotos">Photos</button></li>
+				<li><button id="buttonContacts">Contacts</button></li>
+				<li><button id="buttonNotes">Notes</button></li>
+				<li><button id="buttonImports">Imports</button></li>
+				<li><button id="buttonSettings">Réglages</button></li>
+			</ul>
+		</nav>
+
+		<section class="view">
+			<section class="home middle">
+				<div class="infosMaps">
+					<div id="direction" class="direction"></div>
+				</div>
+
+				<div id="map-canvas"></div>
+
+				<div class="actions">
+					<button id="buttonGeolocation" class="geolocation"><i class="icon icon-direction"></i></button>
+					<button id="buttonAddLocation" class="add"><i class="icon icon-plus"></i></button>
+				</div>
+			</section>
+
+			<section class="photos left">
+				<button id="buttonCapturePhoto">Prendre une photo</button>
+				<button id="buttonGetPhoto">Depuis la gallerie</button>
+				<img style="display:none;" id="smallImage" src="" />
+				<img style="display:none;" id="largeImage" src="" />
+			</section>
+
+			<section class="contacts left">
+				<button id="buttonPickContact">Trouver un contact</button>
+				<div id="selectedContact"></div>
+			</section>
+
+			<section class="notes left">
+				<textarea></textarea>
+				<button id="buttonSendMessage">Enregistrer le message</button>
+
+				<div class="messages"></div>
+			</section>
+
+			<section class="imports left">
+				<div id="imports"></div>
+			</section>
+
+			<section class="settings left">
+			</section>
+		</section>
+
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/lib/jquery-2.1.3.min.js"></script>
+		<!--
+		<script>jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage = false; });</script>
+		<script type="text/javascript" src="js/lib/jquery.mobile-1.4.5.min.js"></script>
+		-->
+		<script type="text/javascript" src="js/index.js"></script>
+
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtjsZbc5RkPHhf3_31erV8xhfR1k5q_cI"></script>
+		<script type="text/javascript" src="js/gmaps.js"></script>
+
+		<script type="text/javascript" src="ga.js"></script>
+	    <script>
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-62198728-1']);
+			_gaq.push(['_setDomainName', 'none']);
+			_gaq.push(['_trackPageview', 'Homepage']);
+	    </script>
+	</body>
+</html>

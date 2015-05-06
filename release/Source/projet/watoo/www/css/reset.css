@@ -1,0 +1,110 @@
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);	/* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background: white;
+	font-family: "Roboto", Arial, Sans-Serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.6rem;
+	-webkit-text-size-adjust: none;
+	color: white;
+	-webkit-touch-callout: none;		/* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none;		/* prevent webkit from resizing text to fit */
+	-webkit-user-select: none;			/* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	font-style: normal;
+}
+
+a {
+	color: white;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+ul {
+	list-style: none;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+i, em {
+	font-style: italic;
+}
+
+i.icon {
+	color: white;
+}
+
+button {
+	font-family: "Roboto", Arial, Sans-Serif;
+	color: white;
+}
+
+input {
+	display: block;
+	font-family: "Roboto", Arial, Sans-Serif;
+}
+
+textarea {
+	font-family: "Roboto", Arial, Sans-Serif;
+	resize: none;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	color: #000;
+	color: rgba(0,0,0,0);
+	text-shadow: 0 0 0 #000;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+:focus {
+	outline: 0;
+}
+
+::-ms-clear {
+	display: none;
+}
+
+::-ms-reveal {
+	display: none;
+}
