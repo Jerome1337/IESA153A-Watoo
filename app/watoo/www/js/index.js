@@ -1,4 +1,7 @@
 document.addEventListener('deviceready', function() {
+	/* -- STATUSBAR ----------------------------------------------------------------------------------------------------------------- */
+	StatusBar.hide();
+	
 	/* -- BOUSSOLE ------------------------------------------------------------------------------------------------------------------ */
 	navigator.compass.watchHeading(onSuccessDirection, onErrorDirection, optionsDirection);
 

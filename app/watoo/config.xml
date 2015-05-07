@@ -84,5 +84,6 @@
 	</platform>
 
 	<!-- STATUSBAR -->
+	<preference name="StatusBarOverlaysWebView" value="true" />
 	<preference name="StatusBarBackgroundColor" value="#1e5d86" />
 </widget>
