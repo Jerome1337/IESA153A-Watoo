@@ -47,6 +47,7 @@ $ cordova plugin add org.apache.cordova.camera
 $ cordova plugin add org.apache.cordova.geolocation
 $ cordova plugin add org.apache.cordova.statusbar
 $ cordova plugin add org.apache.cordova.contacts
+$ cordova plugin add org.apache.cordova.device-orientation
 $ cordova plugin add com.unarin.cordova.beacon
 ```
 
